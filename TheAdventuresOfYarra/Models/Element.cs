@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TheAdventuresOfYarra
+namespace TheAdventuresOfYarra.Models
 {
     //Beschrijft een element wat op een tile staat
     class Element

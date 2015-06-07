@@ -4,20 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TheAdventuresOfYarra
+namespace TheAdventuresOfYarra.Models
 {
     class Tile
     {
         public string name;
+        public string description;
         public List<Element> elements;
-        public List<Tile> exits;
-        public List<Tile> tileSet;
+        public List<Exit> exits;
+        public TileSet tileSet;
 
         public Tile(string name)
         {
             //Zet de lijsten klaar voor gebruik
+            this.name = name;
             elements = new List<Element>();
-            exits = new List<Tile>();
+            exits = new List<Exit>();
         }
 
         public void Describe()
