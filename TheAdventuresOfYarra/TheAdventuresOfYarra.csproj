@@ -41,15 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Element.cs" />
+    <Compile Include="Controllers\RosewaterCaveController.cs" />
+    <Compile Include="Controllers\RosewaterController.cs" />
+    <Compile Include="Models\Element.cs" />
+    <Compile Include="Models\Exit.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tile.cs" />
+    <Compile Include="Models\Tile.cs" />
     <Compile Include="TileManager.cs" />
+    <Compile Include="Models\TileSet.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

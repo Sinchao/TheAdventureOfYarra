@@ -3,28 +3,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TheAdventuresOfYarra.Controllers;
+using TheAdventuresOfYarra.Models;
 
 namespace TheAdventuresOfYarra
 { 
     class TileManager 
     {
-        List<List<Tile>> tileSets;
+        List<TileSet> tileSets;
 
         public void Prepare() 
         {
-            CreateTiles();
+            tileSets = new List<TileSet>();
+            CreateTileSets();
         }
 
-        private void CreateTiles()
+        private void CreateTileSets()
         {
             CreateRosewater();
+            CreateRosewaterCave();
         }
 
         private void CreateRosewater()
         {
-            List<Tile> Rosewater = new List<Tile>();
-
-            Tile livingDistrict = new Tile("livingDistrict");
+            RosewaterController controller = new RosewaterController();
+            tileSets.Add(controller.CreateRosewater());
         } 
+
+        private void CreateRosewaterCave()
+        {
+            RosewaterCaveController controller = new RosewaterCaveController();
+            tileSets.Add(controller.CreateRosewaterCave());
+        }
     }
 }
