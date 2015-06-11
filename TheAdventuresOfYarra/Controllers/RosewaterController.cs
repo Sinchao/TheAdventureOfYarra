@@ -75,13 +75,13 @@ namespace TheAdventuresOfYarra.Controllers
         private Tile CreateGeneralStore()
         {
             Tile generalStore = new Tile("General Store");
-            generalStore.description = "The general store is filled with curiousities. The owner lives on the first floor, but that is a pricate area.";
+            generalStore.description = "The general store is filled with curiousities. The owner lives on the first floor, but that is a private area.";
 
             generalStore.elements.Add(new Element("Owner", "The owner, Mr. Floote, greets you from behind the counter. He is a kind, rather thickset man."));
             generalStore.elements.Add(new Element("Shelves", "All around you are wooden shelves filled with the wares."));
-            generalStore.elements.Add(new Element("Violin", "Your eyes fall on a beautiful violin. You've seen it before, and wanted to buy it if you ever save enough money. Perhaps once."));
-            generalStore.elements.Add(new Element("Fabric", "There's a bolt of green patterned cotton. Mother said she wanted to make a new summer jacket. This colour would look lovely on her!"));
-            generalStore.elements.Add(new Element("Candy", "You can smell the candy before you see it. There's a open jar with brightly coloured sweets. Hmm, perhaps a few won't hurt..."));
+            generalStore.elements.Add(new Element("Violin", "Your eyes fall on a beautiful violin. You've seen it before, and wanted to buy it if you ever save enough money. Perhaps one day."));
+            generalStore.elements.Add(new Element("Fabric", "There's a bolt of green, patterned cotton. Mother said she wanted to make a new summer jacket. This colour would look lovely on her!"));
+            generalStore.elements.Add(new Element("Candy", "You can smell the candy before you see it. There's a open jar with brightly coloured sweets. Hmm, perhaps buying a few won't hurt..."));
 
             return generalStore;
         }
