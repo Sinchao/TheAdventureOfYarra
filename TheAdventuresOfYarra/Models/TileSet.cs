@@ -16,5 +16,18 @@ namespace TheAdventuresOfYarra.Models
             this.name = name;
             tiles = new List<Tile>();
         }
+
+        public Tile Find(string name)
+        {
+            foreach (Tile t in tiles)
+            {
+                if(t.name == name)
+                {
+                    return t;
+                }
+            }
+
+            return null;
+        }
     }
 }

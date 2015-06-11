@@ -13,13 +13,43 @@ namespace TheAdventuresOfYarra.Controllers
         {
             TileSet rosewater = new TileSet("Rosewater");
 
-            rosewater.tiles.Add(CreateHome());
-            rosewater.tiles.Add(CreateNeighbour());
-            rosewater.tiles.Add(CreateLivingDistrict());
-            rosewater.tiles.Add(CreateShoppingDistrict());
-            rosewater.tiles.Add(CreateGeneralStore());
+            List<Tile> tileList = CreateTiles();
+            rosewater.tiles = AddExits(tileList);
 
             return rosewater;
+        }
+
+        private List<Tile> CreateTiles()
+        {
+            List<Tile> tileList = new List<Tile>();
+
+            tileList.Add(CreateHome());
+            tileList.Add(CreateNeighbour());
+            tileList.Add(CreateLivingDistrict());
+            tileList.Add(CreateShoppingDistrict());
+            tileList.Add(CreateGeneralStore());
+
+            return tileList;
+        }
+
+        private List<Tile> AddExits(List<Tile> tileList)
+        {
+            tileList[0] = CreateHomeExits(tileList[0], tileList);
+            tileList[1] = CreateNeighbourExits(tileList[1], tileList);
+
+            return tileList;
+        }
+
+        private Tile CreateHomeExits(Tile tile, List<Tile> tileList)
+        {
+            tile.exits.Add(new Exit(tileList[2], Direction.South));
+            return tile;
+        }
+
+        private Tile CreateNeighbourExits(Tile tile, List<Tile> tileList)
+        {
+            tile.exits.Add(new Exit(tileList[2], Direction.South));
+            return tile;
         }
 
         private Tile CreateHome()

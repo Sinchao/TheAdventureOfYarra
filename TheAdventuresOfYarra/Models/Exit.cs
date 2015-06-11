@@ -10,6 +10,12 @@ namespace TheAdventuresOfYarra.Models
     {
         public Tile exitTile;
         public Direction direction;
+
+        public Exit(Tile t, Direction d)
+        {
+            exitTile = t;
+            direction = d;
+        }
     }
 
     enum Direction
