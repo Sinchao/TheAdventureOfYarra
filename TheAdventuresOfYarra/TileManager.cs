@@ -35,5 +35,11 @@ namespace TheAdventuresOfYarra
             RosewaterCaveController controller = new RosewaterCaveController();
             tileSets.Add(controller.CreateRosewaterCave());
         }
+
+        private void CreateRosewaterDocks()
+        {
+            RosewaterDocksController controller = new RosewaterDocksController();
+            tileSets.Add(controller.CreateRosewaterDocks());
+        }
     }
 }

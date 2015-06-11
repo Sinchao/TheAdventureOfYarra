@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Controllers\RosewaterCaveController.cs" />
     <Compile Include="Controllers\RosewaterController.cs" />
+    <Compile Include="Controllers\RosewaterDocksController.cs" />
     <Compile Include="Models\Element.cs" />
     <Compile Include="Models\Exit.cs" />
     <Compile Include="Program.cs" />
