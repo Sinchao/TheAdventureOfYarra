@@ -36,6 +36,9 @@ namespace TheAdventuresOfYarra.Controllers
         {
             tileList[0] = CreateHomeExits(tileList[0], tileList);
             tileList[1] = CreateNeighbourExits(tileList[1], tileList);
+            tileList[2] = CreateLivingDistrictExits(tileList[2], tileList);
+            tileList[3] = CreateShoppingDistrictExits(tileList[3], tileList);
+            tileList[4] = CreateGeneralStoreExits(tileList[4], tileList);
 
             return tileList;
         }
@@ -48,7 +51,28 @@ namespace TheAdventuresOfYarra.Controllers
 
         private Tile CreateNeighbourExits(Tile tile, List<Tile> tileList)
         {
-            tile.exits.Add(new Exit(tileList[2], Direction.South));
+            tile.exits.Add(new Exit(tileList[2], Direction.East));
+            return tile;
+        }
+
+        private Tile CreateLivingDistrictExits(Tile tile, List<Tile> tileList)
+        {
+            tile.exits.Add(new Exit(tileList[0], Direction.North));
+            tile.exits.Add(new Exit(tileList[1], Direction.West));
+            tile.exits.Add(new Exit(tileList[3], Direction.East));
+            return tile;
+        }
+
+        private Tile CreateShoppingDistrictExits(Tile tile, List<Tile> tileList)
+        {
+            tile.exits.Add(new Exit(tileList[2], Direction.West));
+            tile.exits.Add(new Exit(tileList[4], Direction.North));
+            return tile;
+        }
+
+        private Tile CreateGeneralStoreExits(Tile tile, List<Tile> tileList)
+        {
+            tile.exits.Add(new Exit(tileList[3], Direction.South));
             return tile;
         }
 
